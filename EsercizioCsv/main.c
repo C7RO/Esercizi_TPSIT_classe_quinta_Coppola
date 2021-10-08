@@ -24,7 +24,6 @@ int main()
     while(fscanf(fp, "%d,",&tabella[k].num)!=EOF)
     {
         fgets(appoggio, 70,fp);
-        strtok(appoggio, ",");
         modificaStringa(appoggio, &tabella[k]);
         k++;
     }
@@ -32,7 +31,6 @@ int main()
     {
         printf("Num: %2d, Tit:%s, gen: %s, data: %s, disp: %s\n",tabella[j].num, tabella[j].titolo,tabella[j].genere,tabella[j].data,tabella[j].disp);
     }
-
     fclose(fp);
     return 0;
 }
@@ -41,41 +39,12 @@ void modificaStringa(char str[], film * x)
 {
     int k=0;
     int j=0;
-    while(str[k]!='\0')
-    {
-        x->titolo[j]=str[k];
-        k++;
-        j++;
-
-    }
-    x->titolo[j]='\0';
-    j=0;
-    k++;
-    while(str[k]!=',')
-    {
-
-        x->genere[j]=str[k];
-        k++;
-        j++;
-    }
-    x->genere[j]='\0';
-    j=0;
-    k++;
-    while(str[k]!=',')
-    {
-        x->data[j]=str[k];
-        k++;
-        j++;
-    }
-    x->data[j]='\0';
-    j=0;
-    k++;
-    while(str[k]!='\0')
-    {
-        x->disp[j]=str[k];
-        k++;
-        j++;
-    }
-    x->disp[j]='\0';
-    j=0;
+    char * p=strtok(str, ",");
+    strcpy(x->titolo, p);
+    p=strtok(NULL, ",");
+    strcpy(x->genere, p);
+    p=strtok(NULL, ",");
+    strcpy(x->data, p);
+    p=strtok(NULL, ",");
+    strcpy(x->disp, p);
 }
