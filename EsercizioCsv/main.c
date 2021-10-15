@@ -17,28 +17,28 @@ int main()
 {
 
     FILE*fp;
-    film tabella[DIM];
+    film * tabella;
+    tabella=(film*) malloc(DIM*sizeof(film));
     char appoggio[LUNG];
     fp=fopen("tabella.txt","r");
     int k=0;
-    while(fscanf(fp, "%d,",&tabella[k].num)!=EOF)
+    while(fscanf(fp, "%d,",&(tabella+k)->num)!=EOF)
     {
         fgets(appoggio, 70,fp);
-        modificaStringa(appoggio, &tabella[k]);
+        modificaStringa(appoggio, tabella+k);
         k++;
     }
     for(int j=0; j<k; j++)
     {
-        printf("Num: %2d, Tit:%s, gen: %s, data: %s, disp: %s\n",tabella[j].num, tabella[j].titolo,tabella[j].genere,tabella[j].data,tabella[j].disp);
+        printf("Num: %2d, Tit:%s, gen: %s, data: %s, disp: %s\n",(tabella+j)->num, (tabella+j)->titolo,(tabella+j)->genere,(tabella+j)->data,(tabella+j)->disp);
     }
+    free(tabella);
     fclose(fp);
     return 0;
 }
 
-void modificaStringa(char str[], film * x)
+void modificaStringa(char *str, film * x)
 {
-    int k=0;
-    int j=0;
     char * p=strtok(str, ",");
     strcpy(x->titolo, p);
     p=strtok(NULL, ",");
@@ -47,4 +47,16 @@ void modificaStringa(char str[], film * x)
     strcpy(x->data, p);
     p=strtok(NULL, ",");
     strcpy(x->disp, p);
+}
+
+int contaRighe()
+{
+    int conta=0;
+    FILE*fp=fopen("tabella.txt","r");
+    char riga[LUNG];
+    while(fgets(riga, LUNG, fp))
+    {
+        conta++;
+    }
+    fclose(fp);
 }
