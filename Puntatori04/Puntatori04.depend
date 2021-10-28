@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1634891941 source:c:\users\carmi\desktop\scuola\tecn_inf\teoria\codeblocks\puntatori04\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1635446613 source:c:\users\carmi\desktop\scuola\tpsi\puntatori04\main.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
