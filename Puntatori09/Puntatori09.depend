@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1638437620 source:c:\users\carmi\desktop\scuola\tpsi\puntatori09\main.c
+	<stdio.h>
+	<stdlib.h>
+
