@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1639678367 source:c:\users\carmi\desktop\scuola\tpsi\puntatori13\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<string.h>
+
