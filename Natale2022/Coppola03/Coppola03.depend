@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1641660367 source:c:\users\carmi\desktop\scuola\tpsi\natale2022\coppola03\main.c
+	<stdio.h>
+	<stdlib.h>
+
