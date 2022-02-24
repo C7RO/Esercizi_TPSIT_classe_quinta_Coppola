@@ -10,7 +10,7 @@ e la deallocazione della memoria.
 
 float ** malloc2d(float **m, int n1, int n2)
 {
-    m=(float **) calloc(n1, sizeof(float*));
+    m=(float **) calloc(n1, sizeof(float*));//dichiarazione matrice
     for(int k=0; k< n2; k++)
     {
         *(m+k) = (float*)calloc(n2, sizeof(float));
@@ -18,7 +18,7 @@ float ** malloc2d(float **m, int n1, int n2)
     return m;
 }
 
-void leggiMat(float **m, int r, int c)
+void leggiMat(float **m, int r, int c)//Letture degli elementi, colonne per riga
 {
     for(int k=0; k< r; k++)
     {
@@ -30,7 +30,7 @@ void leggiMat(float **m, int r, int c)
     }
 }
 
-void stampaMat(float **m, int r, int c)
+void stampaMat(float **m, int r, int c)//stampa matrice
 {
     for(int k=0; k< r; k++)
     {

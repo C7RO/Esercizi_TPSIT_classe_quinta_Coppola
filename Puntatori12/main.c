@@ -49,10 +49,10 @@ void stampaLista(Nodo*l)
 Nodo* aggiungiNodo(Nodo * l)
 {
     int num;
-    printf("Dammi un valore: ");
+    printf("Dammi un valore: ");//Viene letto l'elemento
     scanf("%d", &num);
 
-    Nodo * n= (Nodo*)malloc(sizeof(Nodo));
+    Nodo * n= (Nodo*)malloc(sizeof(Nodo));//viene dichiarata un'area di memoria che punta all'elemento successivo
     n->num=num;
     n->next=l;
     return n;

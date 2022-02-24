@@ -12,7 +12,7 @@ typedef struct nodo
     struct nodo * next;
 } Nodo;
 
-Nodo * formattaLista(Nodo** tail)
+Nodo * formattaLista(Nodo** tail)//Lettura elementi e creazione lista
 {
     int n;
     printf("Quanti numeri vuole inserire: ");
@@ -41,7 +41,7 @@ Nodo * formattaLista(Nodo** tail)
     return head;
 }
 
-void enqueue(Nodo ** t, int num)
+void enqueue(Nodo ** t, int num)//aggiunge elemento in coda
 {
     Nodo*tail=*t;
     if(tail==NULL)
@@ -60,7 +60,7 @@ void enqueue(Nodo ** t, int num)
     *t=tail;
 }
 
-int denqueue(Nodo ** head)
+int denqueue(Nodo ** head)//toglie elemento in testa
 {
     int num=0;
     if(*head==NULL)
@@ -76,13 +76,13 @@ int denqueue(Nodo ** head)
     return num;
 }
 
-void stampaLista(Nodo*l)
+void stampaLista(Nodo*l)//stanpa lista ricorsiva
 {
     if(l->next!=NULL)stampaLista(l->next);
     printf("%d ",l-> num);
 }
 
-Nodo* push(Nodo * l, int c)
+Nodo* push(Nodo * l, int c)//aggiunge elemento in testa
 {
     Nodo * n= (Nodo*)malloc(sizeof(Nodo));
     n->num=c;
@@ -94,7 +94,7 @@ Nodo* push(Nodo * l, int c)
     return n;
 }
 
-int pop(Nodo ** l)
+int pop(Nodo ** l)//toglie elemento in testa
 {
     Nodo * n= (Nodo*)malloc(sizeof(Nodo));
     n=*l;
@@ -112,7 +112,7 @@ int pop(Nodo ** l)
     return num;
 }
 
-Nodo* invertiCoda(Nodo ** head)
+Nodo* invertiCoda(Nodo ** head)//sfruttando una pila extra si inverte la coda utilizzando i metodi base push, pop, enqueue e denqueue
 {
     Nodo * pila=NULL;
     Nodo*t=*head;

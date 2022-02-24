@@ -6,7 +6,7 @@ interi (massimo 100), li collochi in un vettore e inverta il vettore
 (scambiando il primo elemento con l'ultimo, il secondo con il penultimo, etc.).
 Si usi i puntatori.*/
 
-void leggiVett(int *v, int n)
+void leggiVett(int *v, int n) //lettura di un vettore int
 {
     for(int k=0; k< n; k++)
     {
@@ -15,7 +15,7 @@ void leggiVett(int *v, int n)
     }
 }
 
-void invertiVett(int *v, int n)
+void invertiVett(int *v, int n)//Inversione dell'ordine degli elementi di un vettore int
 {
     int t;
     for(int k=0; k< n/2; k++)
@@ -26,7 +26,7 @@ void invertiVett(int *v, int n)
     }
 }
 
-void stampaVett(int *v, int n)
+void stampaVett(int *v, int n)//Stampa di un vettore int, tramite puntatore
 {
     for(int k=0; k< n; k++)
     {

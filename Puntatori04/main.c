@@ -20,7 +20,7 @@ void cat(char * s1, char *s2)
 int main()
 {
 
-    char * s1= (char *) malloc(LUNG2 * sizeof(char));
+    char * s1= (char *) malloc(LUNG2 * sizeof(char));//Esercizio basato sull'utilizzo dei puntatori
     char * s2= (char *) malloc(LUNG1 * sizeof(char));
     printf("Dammi la prima stringa: ");
     scanf("%s", s1);

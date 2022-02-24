@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #define DIM 100
 
-void leggiVettInt(int vett[], int n)
+void leggiVettInt(int vett[], int n)//Si legge un vettore di int
 {
     int k;
     for(k= 0; k < n; k++)
@@ -12,13 +12,13 @@ void leggiVettInt(int vett[], int n)
     }
 }
 
-typedef struct nodo
+typedef struct nodo //struttura dei nodi della lista
 {
     int num;
     struct nodo * next;
 } Nodo;
 
-Nodo * formattaLista( int* v, int n)
+Nodo * formattaLista( int* v, int n)//viene passato un vettore che diventerà una lista
 {
     Nodo * head=NULL;
     Nodo *r=(Nodo*)malloc(sizeof(Nodo));
@@ -41,7 +41,7 @@ Nodo * formattaLista( int* v, int n)
 
 void stampaLista(Nodo*l, int n)
 {
-    for(int k=0; k< n; k++)
+    for(int k=0; k< n; k++)//stampa della lista
     {
         printf("%d\n",l->num);
         l=l->next;

@@ -13,7 +13,7 @@ bool isA(char * s)
     bool ok=false;
     int n=strlen(s);
     int k=0;
-    while(k< n && k< PLUNG && ok == false)
+    while(k< n && k< PLUNG && ok == false)//Si svolge un ciclo in cui viene controllato ogni carattere della stringa
     {
         if(*(s+k)== 'a' || *(s+k)=='A')
             ok=true;
@@ -28,9 +28,9 @@ int main()
     printf("Dammi una stringa: ");
     scanf("%s", stringa);
     if(isA(stringa))
-        printf("C'è una A/a tra i primi dieci caratteri\n");
+        printf("C'e' una A/a tra i primi dieci caratteri\n");
     else
-        printf("NON c'è una A/a tra i primi dieci caratteri\n");
+        printf("NON c'e' una A/a tra i primi dieci caratteri\n");
 
     return 0;
 }

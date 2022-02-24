@@ -5,7 +5,7 @@
 
 float ** malloc2d(float **m, int n1, int n2)
 {
-    m=(float **) calloc(n1, sizeof(float*));
+    m=(float **) calloc(n1, sizeof(float*));//dichiarazione della matrice a [n1][n2]
     for(int k=0; k< n2; k++)
     {
         *(m+k) = calloc(n2, sizeof(float));
@@ -13,7 +13,7 @@ float ** malloc2d(float **m, int n1, int n2)
     return m;
 }
 
-void stampaMat(float **m, int r, int c)
+void stampaMat(float **m, int r, int c)//stampa utilizzando due cicli for annidati per righe e colonne
 {
     for(int k=0; k< r; k++)
     {

@@ -40,7 +40,7 @@ Nodo * formattaLista()
 
 void stampaLista(Nodo*l)
 {
-    if(l->next!=NULL)stampaLista(l->next);
+    if(l->next!=NULL)stampaLista(l->next);//la stampa avviene al contrario sfruttando la ricorsione
     if(l!=NULL)printf("%d\n",l-> num);
 }
 

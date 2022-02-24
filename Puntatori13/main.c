@@ -13,7 +13,7 @@ typedef struct nodo
     struct nodo * next;
 } Nodo;
 
-Nodo* push(Nodo * l, char c)
+Nodo* push(Nodo * l, char c)//si aggiunge un elemento in lista
 {
     Nodo * n= (Nodo*)malloc(sizeof(Nodo));
     n->c=c;
@@ -25,7 +25,7 @@ Nodo* push(Nodo * l, char c)
     return n;
 }
 
-Nodo* pop(Nodo * l)
+Nodo* pop(Nodo * l)//si toglie l'ultimo elemento lista
 {
     Nodo * n= (Nodo*)malloc(sizeof(Nodo));
     n=l;
@@ -47,7 +47,7 @@ bool verificaParentesi(char s[])
     Nodo*head=NULL;
     while (k <  strlen(s) && ok== true)
     {
-        if (s[k]== '(' || s[k] == '[' || s[k]== '{')
+        if (s[k]== '(' || s[k] == '[' || s[k]== '{')// si verifica attraverso una successione di if la corretta apertura e chiusura delle parentesi
         {
             head=push(head, s[k]);
         }
